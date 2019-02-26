@@ -1,0 +1,13 @@
+"Phrases"
+{
+	"Command1"
+	{
+		"#format"	"{1:s}"
+		"en"		"this is {blue}another test"
+	}
+	"Command2"
+	{
+		"#format"	"{1:s}"
+		"en"		"this is {green}another test"
+	}
+}
