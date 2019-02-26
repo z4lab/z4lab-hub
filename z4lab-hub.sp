@@ -10,8 +10,13 @@ public Plugin myinfo =
 	url = "https://z4lab.com"
 };
 
-// define chat prefix
+// set your chat prefix
 new String:g_hChatPrefix[] = "[{lightgreen}z4lab{default}] {gold}#{bluegrey}";
+
+// set the time between chat advertisements in minutes
+new g_hAdTimer = 30;
+
+// general settings/stuff
 bool g_bMessagesShown[MAXPLAYERS + 1];
 
 public void OnPluginStart()
@@ -105,8 +110,7 @@ public Action z4labSteamgroup(int client, int args)
 
 public Action z4labSkins(int client, int args)
 {
-	//PrintHintText(client, "<font color='#bf616a'>NO - this will never happen</font>\ncheck out <font color='#d08770'>!manifesto</font>");
-	PrintCenterText(client, "<font color='#bf616a'>NO</font> - this will never happen\ncheck out <font color='#d08770'>!manifesto</font>", 5);
+	PrintCenterText(client, "<font color='#bf616a'>NO</font> - this will never happen\ncheck out <font color='#d08770'>!manifesto</font>", 8);
 }
 
 // welcome message
