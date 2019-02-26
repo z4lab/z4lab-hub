@@ -105,8 +105,8 @@ public Action z4labSteamgroup(int client, int args)
 
 public Action z4labSkins(int client, int args)
 {
-	PrintHintText(client, "<font color='#bf616a'>NO - this will never happen</font>\ncheck out <font color='#d08770'>!manifesto</font>");
-	PrintCenterText(client, "<font color='#bf616a'>NO - this will never happen</font>\ncheck out <font color='#d08770'>!manifesto</font>");
+	//PrintHintText(client, "<font color='#bf616a'>NO - this will never happen</font>\ncheck out <font color='#d08770'>!manifesto</font>");
+	PrintCenterText(client, "<font color='#bf616a'>NO</font> - this will never happen\ncheck out <font color='#d08770'>!manifesto</font>", 5);
 }
 
 // welcome message
