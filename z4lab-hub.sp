@@ -120,8 +120,9 @@ public Action z4labSteamgroup(int client, int args)
 
 public Action z4labSkins(int client, int args)
 {
-	PrintCenterText(client, "<font color='#bf616a'>NO NO NO</font> - this will never happen\ncheck out <font color='#d08770'>!manifesto</font>\n<font color='#a3be8c'>https://z4lab.com/rules</font>", 60);
-	return Plugin_Continue;
+	PrintCenterText(client, "<font color='#bf616a'>NO NO NO</font> - this will never happen\ncheck out <font color='#d08770'>!manifesto</font>\n<font color='#a3be8c'>https://z4lab.com/rules</font>");
+	CreateTimer(15.0, z4labSkins, _, TIMER_REPEAT);
+	return Plugin_Handled;
 }
 
 // welcome message
