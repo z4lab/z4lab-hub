@@ -31,30 +31,21 @@ public void OnMapStart()
 
 void CreateCommands()
 {
-	// z4lab main command, shows all available commands and info
-	//RegConsoleCmd("sm_z4lab", z4labMain, "displays all z4lab commands");
-
-	// z4lab rules
+	RegConsoleCmd("sm_z4lab", z4labMain, "displays all z4lab commands");
 	RegConsoleCmd("sm_rules", z4labRules, "displays our community rules");
-
-	// z4lab weblinks
-	//RegConsoleCmd("sm_homepage", z4labHomepage, "shows our community rules");
-	//RegConsoleCmd("sm_website", z4labHomepage, "shows our community rules");
-	//RegConsoleCmd("sm_link", z4labHomepage, "shows our community rules");
-	//RegConsoleCmd("sm_manifesto", z4labManifesto, "shows our community rules");
-	//RegConsoleCmd("sm_changelog", z4labChangelog, "shows our community rules");
-	//RegConsoleCmd("sm_changes", z4labChangelog, "shows our community rules");
-	//RegConsoleCmd("sm_giveaway", z4labGiveaway, "shows our community rules");
-	//RegConsoleCmd("sm_howtosurf", z4labHowtosurf, "shows our community rules");
-
-	// z4lab community links
-	//RegConsoleCmd("sm_discord", z4labDiscord, "shows our community rules");
-	//RegConsoleCmd("sm_teamspeak", z4labTeamspeak, "shows our community rules");
-	//RegConsoleCmd("sm_ts", z4labTeamspeak, "shows our community rules");
-	//RegConsoleCmd("sm_steamgroup", z4labSteamgroup, "shows our community rules");
-	//RegConsoleCmd("sm_steam", z4labSteamgroup, "shows our community rules");
-	
-	// skin changer commands
+	RegConsoleCmd("sm_homepage", z4labHomepage, "shows our community rules");
+	RegConsoleCmd("sm_website", z4labHomepage, "shows our community rules");
+	RegConsoleCmd("sm_link", z4labHomepage, "shows our community rules");
+	RegConsoleCmd("sm_manifesto", z4labManifesto, "shows our community rules");
+	RegConsoleCmd("sm_changelog", z4labChangelog, "shows our community rules");
+	RegConsoleCmd("sm_changes", z4labChangelog, "shows our community rules");
+	RegConsoleCmd("sm_giveaway", z4labGiveaway, "shows our community rules");
+	RegConsoleCmd("sm_howtosurf", z4labHowtosurf, "shows our community rules");
+	RegConsoleCmd("sm_discord", z4labDiscord, "shows our community rules");
+	RegConsoleCmd("sm_teamspeak", z4labTeamspeak, "shows our community rules");
+	RegConsoleCmd("sm_ts", z4labTeamspeak, "shows our community rules");
+	RegConsoleCmd("sm_steamgroup", z4labSteamgroup, "shows our community rules");
+	RegConsoleCmd("sm_steam", z4labSteamgroup, "shows our community rules");
 	RegConsoleCmd("sm_skins", z4labSkins, "prints default message for skins");
 	RegConsoleCmd("sm_ws", z4labSkins, "prints default message for skins");
 	RegConsoleCmd("sm_gloves", z4labSkins, "prints default message for skins");
@@ -62,15 +53,59 @@ void CreateCommands()
 }
 
 // chat replay (commands)
-public Action z4labSkins(int client, int args)
+public Action z4labMain(int client, int args)
 {
-	PrintHintText(client, "<font color='#bf616a'>NO</font>");
+	CPrintToChat(client, "%t", "z4labMain", g_hChatPrefix);
+}
+
+public Action z4labHomepage(int client, int args)
+{
+	CPrintToChat(client, "%t", "z4labHomepage", g_hChatPrefix);
+}
+
+public Action z4labManifesto(int client, int args)
+{
+	CPrintToChat(client, "%t", "z4labManifesto", g_hChatPrefix);
+}
+
+public Action z4labChangelog(int client, int args)
+{
+	CPrintToChat(client, "%t", "z4labChangelog", g_hChatPrefix);
 }
 
 public Action z4labRules(int client, int args)
 {
-	CPrintToChat(client, "%t", "Command1", g_hChatPrefix);
-	CPrintToChat(client, "%t", "Command2", g_hChatPrefix);
+	CPrintToChat(client, "%t", "z4labRules", g_hChatPrefix);
+}
+
+public Action z4labGiveaway(int client, int args)
+{
+	CPrintToChat(client, "%t", "z4labGiveaway", g_hChatPrefix);
+}
+
+public Action z4labHowtosurf(int client, int args)
+{
+	CPrintToChat(client, "%t", "z4labHowtosurf", g_hChatPrefix);
+}
+
+public Action z4labDiscord(int client, int args)
+{
+	CPrintToChat(client, "%t", "z4labDiscord", g_hChatPrefix);
+}
+
+public Action z4labTeamspeak(int client, int args)
+{
+	CPrintToChat(client, "%t", "z4labTeamspeak", g_hChatPrefix);
+}
+
+public Action z4labSteamgroup(int client, int args)
+{
+	CPrintToChat(client, "%t", "z4labSteamgroup", g_hChatPrefix);
+}
+
+public Action z4labSkins(int client, int args)
+{
+	PrintHintText(client, "<font color='#bf616a'>NO - this will never happen</font>\ntry {gold}!manifesto");
 }
 
 // welcome message
@@ -82,7 +117,7 @@ public void Event_OnPlayerSpawn(Event event, const char[] name, bool dontBroadca
 	{
 		return;
 	}
-	CreateTimer(2.0, Timer_DelaySpawn, GetClientUserId(client), TIMER_FLAG_NO_MAPCHANGE);
+	CreateTimer(1.5, Timer_DelaySpawn, GetClientUserId(client), TIMER_FLAG_NO_MAPCHANGE);
 }
 
 public Action Timer_DelaySpawn(Handle timer, any data)
@@ -94,10 +129,10 @@ public Action Timer_DelaySpawn(Handle timer, any data)
 		return Plugin_Continue;
 	}
 
-	CPrintToChat(client, "[{lightgreen}z4lab{default}] {gold}#{bluegrey} Welcome {purple}%N {bluegrey}enjoy your stay!", client);
-	CPrintToChat(client, "[{lightgreen}z4lab{default}] {gold}#{bluegrey} You can find our rules with {gold}!rules {bluegrey}or on {lightgreen}z4lab.com/rules", client);
-	CPrintToChat(client, "[{lightgreen}z4lab{default}] {gold}#{bluegrey} Be nice - {red}toxicity/racism {bluegrey}will not be tolerated!", client);
-	CPrintToChat(client, "[{lightgreen}z4lab{default}] {gold}#{bluegrey} Useful commands: [{gold}!z4lab {bluegrey}| {gold}!servers {bluegrey}| {gold}!discord{bluegrey}]", client);
+	CPrintToChat(client, "%t", "z4labWelcome1", g_hChatPrefix);
+	CPrintToChat(client, "%t", "z4labWelcome2", g_hChatPrefix);
+	CPrintToChat(client, "%t", "z4labWelcome3", g_hChatPrefix);
+	CPrintToChat(client, "%t", "z4labWelcome4", g_hChatPrefix);
 	g_bMessagesShown[client] = true;
 	
 	return Plugin_Continue;
