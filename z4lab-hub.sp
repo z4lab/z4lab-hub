@@ -117,7 +117,7 @@ public void Event_OnPlayerSpawn(Event event, const char[] name, bool dontBroadca
 	{
 		return;
 	}
-	CreateTimer(1.5, Timer_DelaySpawn, GetClientUserId(client), TIMER_FLAG_NO_MAPCHANGE);
+	CreateTimer(2.0, Timer_DelaySpawn, GetClientUserId(client), TIMER_FLAG_NO_MAPCHANGE);
 }
 
 public Action Timer_DelaySpawn(Handle timer, any data)
@@ -129,10 +129,10 @@ public Action Timer_DelaySpawn(Handle timer, any data)
 		return Plugin_Continue;
 	}
 
-	CPrintToChat(client, "%t", "z4labWelcome1", g_hChatPrefix);
-	CPrintToChat(client, "%t", "z4labWelcome2", g_hChatPrefix);
-	CPrintToChat(client, "%t", "z4labWelcome3", g_hChatPrefix);
-	CPrintToChat(client, "%t", "z4labWelcome4", g_hChatPrefix);
+	CPrintToChat(client, "%t", "z4labWelcome1", g_hChatPrefix, client);
+	CPrintToChat(client, "%t", "z4labWelcome2", g_hChatPrefix, client);
+	CPrintToChat(client, "%t", "z4labWelcome3", g_hChatPrefix, client);
+	CPrintToChat(client, "%t", "z4labWelcome4", g_hChatPrefix, client);
 	g_bMessagesShown[client] = true;
 	
 	return Plugin_Continue;

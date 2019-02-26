@@ -3,71 +3,71 @@
 	"z4labMain"
 	{
 		"#format"	"{1:s}"
-		"en"		"Overview of useful commands: {gold}!rules {bluegrey}|{gold} !homepage {bluegrey}|{gold} !steamgroup {bluegrey}|{gold} !teamspeak {bluegrey}|{gold} !discord {bluegrey}|{gold} !giveaway {bluegrey}|{gold} !changes {bluegrey}|{gold} !manifesto"
+		"en"		"{1} Overview of useful commands: {gold}!rules {bluegrey}|{gold} !homepage {bluegrey}|{gold} !steamgroup {bluegrey}|{gold} !teamspeak {bluegrey}|{gold} !discord {bluegrey}|{gold} !giveaway {bluegrey}|{gold} !changes {bluegrey}|{gold} !manifesto"
 	}
 	"z4labHomepage"
 	{
 		"#format"	"{1:s}"
-		"en"		"visit us at {lightgreen}https://z4lab.com"
+		"en"		"{1} visit us at {lightgreen}https://z4lab.com"
 	}
 	"z4labManifesto"	
 	{
 		"#format"	"{1:s}"
-		"en"		"Manifesto Page: {lightgreen}https://z4lab.com/manifesto"
+		"en"		"{1} Manifesto Page: {lightgreen}https://z4lab.com/manifesto"
 	}
 	"z4labChangelog"
 	{
 		"#format"	"{1:s}"
-		"en"		"recent changes: {lightgreen}https://z4lab.com/changelog"
+		"en"		"{1} recent changes: {lightgreen}https://z4lab.com/changelog"
 	}
 	"z4labRules"
 	{
 		"#format"	"{1:s}"
-		"en"		"Detailed rules: {lightgreen}https://z4lab.com/rules - {bluegrey}Voice/Text Language is {lightgreen}ENGLISH{bluegrey} - Be nice and don't troll - if you just connect to make troubles, do a rap battle or play DJ expect a {red}kick"
+		"en"		"{1} Detailed rules: {lightgreen}https://z4lab.com/rules - {bluegrey}Voice/Text Language is {lightgreen}ENGLISH{bluegrey} - Be nice and don't troll - if you just connect to make troubles, do a rap battle or play DJ expect a {red}kick"
 	}
 	"z4labGiveaway"
 	{
 		"#format"	"{1:s}"
-		"en"		"Join our {gold}!steamgroup {bluegrey}and {gold}!discord - more Information: {lightgreen}https://z4lab.com/giveaway"
+		"en"		"{1} Join our {gold}!steamgroup {bluegrey}and {gold}!discord - more Information: {lightgreen}https://z4lab.com/giveaway"
 	}
 	"z4labHowtosurf"
 	{
 		"#format"	"{1:s}"
-		"en"		"}Watch this short video: {lightgreen}https://z4lab.com/HowToSurf {bluegrey}[3minutes with timestamp]"
+		"en"		"{1} Watch this short video: {lightgreen}https://z4lab.com/HowToSurf {bluegrey}[3minutes with timestamp]"
 	}
 	"z4labDiscord"
 	{
 		"#format"	"{1:s}"
-		"en"		"Use: {lightgreen}https://z4lab.com/discord {bluegrey}or {lightgreen}https://discord.gg/ddkRmhe"
+		"en"		"{1} Use: {lightgreen}https://z4lab.com/discord {bluegrey}or {lightgreen}https://discord.gg/ddkRmhe"
 	}
 	"z4labTeamspeak"
 	{
 		"#format"	"{1:s}"
-		"en"		"Server: {lightgreen}ts.z4lab.com {bluegrey}Server Nick: {lightgreen}z4lab {bluegrey}| 512 Slots"
+		"en"		"{1} Server: {lightgreen}ts.z4lab.com {bluegrey}Server Nick: {lightgreen}z4lab {bluegrey}| 512 Slots"
 	}
 	"z4labSteamgroup"
 	{
 		"#format"	"{1:s}"
-		"en"		"Our steam group: {lightgreen}https://steamcommunity.com/groups/z4lab"
+		"en"		"{1} Our steam group: {lightgreen}https://steamcommunity.com/groups/z4lab"
 	}
 	"z4labWelcome1"
 	{
 		"#format"	"{1:s}"
-		"en"		"Welcome {purple}%N {bluegrey}enjoy your stay!"
+		"en"		"{1} Welcome {purple}%N {bluegrey}enjoy your stay!"
 	}
 	"z4labWelcome2"
 	{
 		"#format"	"{1:s}"
-		"en"		"You can find our rules with {gold}!rules {bluegrey}or on {lightgreen}z4lab.com/rules"
+		"en"		"{1} You can find our rules with {gold}!rules {bluegrey}or on {lightgreen}z4lab.com/rules"
 	}
 	"z4labWelcome3"
 	{
 		"#format"	"{1:s}"
-		"en"		"Be nice - {red}toxicity/racism {bluegrey}will not be tolerated!"
+		"en"		"{1} Be nice - {red}toxicity/racism {bluegrey}will not be tolerated!"
 	}
 	"z4labWelcome4"
 	{
 		"#format"	"{1:s}"
-		"en"		"Useful commands: [{gold}!z4lab {bluegrey}| {gold}!servers {bluegrey}| {gold}!discord{bluegrey}]"
+		"en"		"{1} Useful commands: [{gold}!z4lab {bluegrey}| {gold}!servers {bluegrey}| {gold}!discord{bluegrey}]"
 	}
 }
