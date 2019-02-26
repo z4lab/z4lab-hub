@@ -64,7 +64,7 @@ void CreateCommands()
 // chat replay (commands)
 public Action z4labSkins(int client, int args)
 {
-	PrintHintText(client, "{red}NO");
+	PrintHintText(client, "<font color='#bf616a'>NO</font>");
 }
 
 public Action z4labRules(int client, int args)
