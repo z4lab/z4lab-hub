@@ -23,7 +23,7 @@
 	"z4labRules"
 	{
 		"#format"	"{1:s}"
-		"en"		"{1} Detailed rules: {lightgreen}https://z4lab.com/rules - {bluegrey}Voice/Text Language is {lightgreen}ENGLISH{bluegrey} - Be nice and don't troll - if you just connect to make troubles, do a rap battle or play DJ expect a {red}kick"
+		"en"		"{1} Detailed rules: {lightgreen}https://z4lab.com/rules - \n{bluegrey}Voice/Text Language is {lightgreen}ENGLISH{bluegrey} - Be nice and don't troll - if you just connect to make troubles, do a rap battle or play DJ expect a {red}kick"
 	}
 	"z4labGiveaway"
 	{

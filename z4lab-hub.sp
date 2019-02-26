@@ -145,6 +145,7 @@ public Action Timer_DelaySpawn(Handle timer, any data)
 		return Plugin_Continue;
 	}
 
+	PrintCenterText(client, "<font color='#bf616a'>Please read our rules on the chat</font>\nMore info with <font color='#d08770'>!rules</font>\n<font color='#a3be8c'>https://z4lab.com/rules</font>", 5);
 	CPrintToChat(client, "%t", "z4labWelcome1", g_hChatPrefix, client);
 	CPrintToChat(client, "%t", "z4labWelcome2", g_hChatPrefix, client);
 	CPrintToChat(client, "%t", "z4labWelcome3", g_hChatPrefix, client);
