@@ -61,56 +61,67 @@ void CreateCommands()
 public Action z4labMain(int client, int args)
 {
 	CPrintToChat(client, "%t", "z4labMain", g_hChatPrefix);
+	return Plugin_Handled;
 }
 
 public Action z4labHomepage(int client, int args)
 {
 	CPrintToChat(client, "%t", "z4labHomepage", g_hChatPrefix);
+	return Plugin_Handled;
 }
 
 public Action z4labManifesto(int client, int args)
 {
 	CPrintToChat(client, "%t", "z4labManifesto", g_hChatPrefix);
+	return Plugin_Handled;
 }
 
 public Action z4labChangelog(int client, int args)
 {
 	CPrintToChat(client, "%t", "z4labChangelog", g_hChatPrefix);
+	return Plugin_Handled;
 }
 
 public Action z4labRules(int client, int args)
 {
 	CPrintToChat(client, "%t", "z4labRules", g_hChatPrefix);
+	return Plugin_Handled;
 }
 
 public Action z4labGiveaway(int client, int args)
 {
 	CPrintToChat(client, "%t", "z4labGiveaway", g_hChatPrefix);
+	return Plugin_Handled;
 }
 
 public Action z4labHowtosurf(int client, int args)
 {
 	CPrintToChat(client, "%t", "z4labHowtosurf", g_hChatPrefix);
+	return Plugin_Handled;
 }
 
 public Action z4labDiscord(int client, int args)
 {
 	CPrintToChat(client, "%t", "z4labDiscord", g_hChatPrefix);
+	return Plugin_Handled;
 }
 
 public Action z4labTeamspeak(int client, int args)
 {
 	CPrintToChat(client, "%t", "z4labTeamspeak", g_hChatPrefix);
+	return Plugin_Handled;
 }
 
 public Action z4labSteamgroup(int client, int args)
 {
 	CPrintToChat(client, "%t", "z4labSteamgroup", g_hChatPrefix);
+	return Plugin_Handled;
 }
 
 public Action z4labSkins(int client, int args)
 {
 	PrintCenterText(client, "<font color='#bf616a'>NO NO NO</font> - this will never happen\ncheck out <font color='#d08770'>!manifesto</font>\n<font color='#a3be8c'>https://z4lab.com/rules</font>", 5);
+	return Plugin_Handled;
 }
 
 // welcome message
