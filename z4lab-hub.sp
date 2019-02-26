@@ -36,25 +36,25 @@ public void OnMapStart()
 
 void CreateCommands()
 {
-	RegConsoleCmd("sm_z4lab", z4labMain, "displays all z4lab commands");
-	RegConsoleCmd("sm_rules", z4labRules, "displays our community rules");
-	RegConsoleCmd("sm_homepage", z4labHomepage, "shows our community rules");
-	RegConsoleCmd("sm_website", z4labHomepage, "shows our community rules");
-	RegConsoleCmd("sm_link", z4labHomepage, "shows our community rules");
-	RegConsoleCmd("sm_manifesto", z4labManifesto, "shows our community rules");
-	RegConsoleCmd("sm_changelog", z4labChangelog, "shows our community rules");
-	RegConsoleCmd("sm_changes", z4labChangelog, "shows our community rules");
-	RegConsoleCmd("sm_giveaway", z4labGiveaway, "shows our community rules");
-	RegConsoleCmd("sm_howtosurf", z4labHowtosurf, "shows our community rules");
-	RegConsoleCmd("sm_discord", z4labDiscord, "shows our community rules");
-	RegConsoleCmd("sm_teamspeak", z4labTeamspeak, "shows our community rules");
-	RegConsoleCmd("sm_ts", z4labTeamspeak, "shows our community rules");
-	RegConsoleCmd("sm_steamgroup", z4labSteamgroup, "shows our community rules");
-	RegConsoleCmd("sm_steam", z4labSteamgroup, "shows our community rules");
-	RegConsoleCmd("sm_skins", z4labSkins, "prints default message for skins");
-	RegConsoleCmd("sm_ws", z4labSkins, "prints default message for skins");
-	RegConsoleCmd("sm_gloves", z4labSkins, "prints default message for skins");
-	RegConsoleCmd("sm_glove", z4labSkins, "prints default message for skins");
+	RegConsoleCmd("sm_z4lab", z4labMain, "[z4lab-hub] displays all z4lab commands");
+	RegConsoleCmd("sm_rules", z4labRules, "[z4lab-hub] displays our community rules");
+	RegConsoleCmd("sm_homepage", z4labHomepage, "[z4lab-hub] displays a link to our homepage");
+	RegConsoleCmd("sm_website", z4labHomepage, "[z4lab-hub] displays a link to our homepage");
+	RegConsoleCmd("sm_link", z4labHomepage, "[z4lab-hub] displays a link to our homepage");
+	RegConsoleCmd("sm_manifesto", z4labManifesto, "[z4lab-hub] displays a link to our manifesto");
+	RegConsoleCmd("sm_changelog", z4labChangelog, "[z4lab-hub] displays a link to our changes");
+	RegConsoleCmd("sm_changes", z4labChangelog, "[z4lab-hub] displays a link to our changes");
+	RegConsoleCmd("sm_giveaway", z4labGiveaway, "[z4lab-hub] more information for our giveaway");
+	RegConsoleCmd("sm_howtosurf", z4labHowtosurf, "[z4lab-hub] shows a video on how to surf");
+	RegConsoleCmd("sm_discord", z4labDiscord, "[z4lab-hub] displays our discord link");
+	RegConsoleCmd("sm_teamspeak", z4labTeamspeak, "[z4lab-hub] displays our teamspeak information");
+	RegConsoleCmd("sm_ts", z4labTeamspeak, "[z4lab-hub] displays our teamspeak information");
+	RegConsoleCmd("sm_steamgroup", z4labSteamgroup, "[z4lab-hub] displays a link to our steam group");
+	RegConsoleCmd("sm_steam", z4labSteamgroup, "[z4lab-hub] displays a link to our steam group");
+	RegConsoleCmd("sm_skins", z4labSkins, "[z4lab-hub] give the user an alerts that we dont support skin changers");
+	RegConsoleCmd("sm_ws", z4labSkins, "[z4lab-hub] give the user an alerts that we dont support skin changers");
+	RegConsoleCmd("sm_gloves", z4labSkins, "[z4lab-hub] give the user an alerts that we dont support skin changers");
+	RegConsoleCmd("sm_glove", z4labSkins, "[z4lab-hub] give the user an alerts that we dont support skin changers");
 }
 
 // chat replay (commands)
