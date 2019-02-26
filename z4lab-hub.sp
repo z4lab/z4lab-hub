@@ -1,5 +1,8 @@
 #include <sourcemod>
 #include <colorvariables>
+#include <sdktools>
+
+#define DEFAULT_TIMER_FLAGS TIMER_REPEAT | TIMER_FLAG_NO_MAPCHANGE
 
 public Plugin myinfo =
 {
@@ -14,7 +17,9 @@ public Plugin myinfo =
 new String:g_hChatPrefix[] = "[{lightgreen}z4lab{default}] {gold}#{bluegrey}";
 
 // set the time between chat advertisements in minutes
-new g_hAdTimer = 30;
+new g_hInterval = 30;
+
+new Handle:t_TimerHandle = INVALID_HANDLE;
 
 // general settings/stuff
 bool g_bMessagesShown[MAXPLAYERS + 1];
@@ -24,6 +29,7 @@ public void OnPluginStart()
 	CreateCommands();
 	LoadTranslations("z4lab.phrases");
 	HookEvent("player_spawn", Event_OnPlayerSpawn);
+	t_TimerHandle = CreateTimer( 10.0, Timer_ChatInfo, _, DEFAULT_TIMER_FLAGS );
 }
 
 public void OnMapStart()
@@ -56,6 +62,12 @@ void CreateCommands()
 	RegConsoleCmd("sm_gloves", z4labSkins, "[z4lab-hub] give the user an alerts that we dont support skin changers");
 	RegConsoleCmd("sm_glove", z4labSkins, "[z4lab-hub] give the user an alerts that we dont support skin changers");
 }
+
+public Action:Timer_ChatInfo( Handle:Timer )
+{
+    CPrintToChatAll("%t", "z4labAd1", g_hChatPrefix );
+    return Plugin_Continue;
+}  
 
 // chat replay (commands)
 public Action z4labMain(int client, int args)

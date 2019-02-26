@@ -70,4 +70,24 @@
 		"#format"	"{1:s}"
 		"en"		"{1} Useful commands: [{gold}!z4lab {bluegrey}| {gold}!servers {bluegrey}| {gold}!discord{bluegrey}]"
 	}
+	"z4labAd1"
+	{
+		"#format"	"{1:s}"
+		"en"		"{1} random chat info 1"
+	}
+	"z4labAd2"
+	{
+		"#format"	"{1:s}"
+		"en"		"{1} random chat info 2"
+	}
+	"z4labAd3"
+	{
+		"#format"	"{1:s}"
+		"en"		"{1} random chat info 3"
+	}
+	"z4labAd4"
+	{
+		"#format"	"{1:s}"
+		"en"		"{1} random chat info 4"
+	}
 }
