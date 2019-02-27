@@ -1,15 +1,12 @@
 #include <sourcemod>
 #include <colorvariables>
-#include <sdktools>
-// #pragma tabsize 0
-#define DEFAULT_TIMER_FLAGS TIMER_REPEAT | TIMER_FLAG_NO_MAPCHANGE
 
 public Plugin myinfo =
 {
 	name = "z4lab-hub",
 	author = "totles",
 	description = "z4lab hub [chat info, welcome message]",
-	version = "0.3",
+	version = "0.5",
 	url = "https://z4lab.com"
 };
 
@@ -25,7 +22,6 @@ public void OnPluginStart()
 	CreateCommands();
 	LoadTranslations("z4lab.phrases");
 	HookEvent("player_spawn", Event_OnPlayerSpawn);
-	CreateTimer( 20.0, Chat_Interval, _, DEFAULT_TIMER_FLAGS );
 }
 
 public void OnMapStart()
@@ -34,6 +30,7 @@ public void OnMapStart()
 	{
 		g_bMessagesShown[i] = false;
 	}
+	CreateTimer (20.0, z4labAdvert1);
 }
 
 void CreateCommands()
@@ -59,11 +56,34 @@ void CreateCommands()
 	RegConsoleCmd("sm_glove", z4labSkins, "[z4lab-hub] give the user an alerts that we dont support skin changers");
 }
 
-public Action Chat_Interval(Handle timer )
+// chat advertisement
+public Action z4labAdvert1(Handle timer )
 {
-    CPrintToChatAll("%t", "z4labAd1", g_hChatPrefix );
-    return Plugin_Continue;
-}  
+	CPrintToChatAll("%t", "z4labAd1", g_hChatPrefix );
+	CreateTimer(20.0, z4labAdvert2);
+	return Plugin_Continue;
+}
+
+public Action z4labAdvert2(Handle timer)
+{
+	CPrintToChatAll("%t", "z4labAd2", g_hChatPrefix );
+	CreateTimer(20.0, z4labAdvert3);
+	return Plugin_Continue;
+}
+
+public Action z4labAdvert3(Handle timer)
+{
+	CPrintToChatAll("%t", "z4labAd3", g_hChatPrefix );
+	CreateTimer(20.0, z4labAdvert4);
+	return Plugin_Continue;
+}
+
+public Action z4labAdvert4(Handle timer)
+{
+	CPrintToChatAll("%t", "z4labAd4", g_hChatPrefix );
+	CreateTimer(20.0, z4labAdvert1);
+	return Plugin_Continue;
+}
 
 // chat commands/triggers
 public Action z4labMain(int client, int args)
@@ -126,16 +146,17 @@ public Action z4labSteamgroup(int client, int args)
 	return Plugin_Handled;
 }
 
+// show alert message for ws/skin plugin requests
 public Action z4labSkins(int client, int args)
 {
-    CreateTimer(2.0, NoSkinsAlert, GetClientUserId(client), TIMER_REPEAT);
+    CreateTimer(0.1, NoSkinsAlert, GetClientUserId(client), TIMER_REPEAT);
 }
  
 public Action NoSkinsAlert(Handle timer, int smth)
 {
 	int client = GetClientOfUserId(smth);
 
-	if (numPrinted >= 5) 
+	if (numPrinted >= 45) 
 	{
 		numPrinted = 0;
 		return Plugin_Stop;
@@ -157,10 +178,10 @@ public void Event_OnPlayerSpawn(Event event, const char[] name, bool dontBroadca
 	{
 		return;
 	}
-	CreateTimer(2.0, Timer_DelaySpawn, GetClientUserId(client), TIMER_FLAG_NO_MAPCHANGE);
+	CreateTimer(2.0, WelcomeMessageDelay, GetClientUserId(client), TIMER_FLAG_NO_MAPCHANGE);
 }
 
-public Action Timer_DelaySpawn(Handle timer, any data)
+public Action WelcomeMessageDelay(Handle timer, any data)
 {
 	int client = GetClientOfUserId(data);
 	
@@ -169,7 +190,7 @@ public Action Timer_DelaySpawn(Handle timer, any data)
 		return Plugin_Continue;
 	}
 
-	PrintCenterText(client, "<font color='#b48ead'>Welcome - Please see chat for rules</font>\nMore info with <font color='#d08770'>!rules</font> or\n<font color='#a3be8c'>https://z4lab.com/rules</font>", 60);
+	PrintCenterText(client, "<font color='#b48ead'>Welcome - Please see chat for rules</font>\nMore info with <font color='#d08770'>!rules</font> or\n<font color='#a3be8c'>https://z4lab.com/rules</font>");
 	CPrintToChat(client, "%t", "z4labWelcome1", g_hChatPrefix, client);
 	CPrintToChat(client, "%t", "z4labWelcome2", g_hChatPrefix, client);
 	CPrintToChat(client, "%t", "z4labWelcome3", g_hChatPrefix, client);
