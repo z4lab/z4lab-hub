@@ -21,5 +21,5 @@ this plugin is a central part for our community servers, it features a welcome m
     - custom commands
 
 ```
-this is my first *"real"* plugin and I'm still new to SourcePawn so keep that in mind :)
+this is my first "real" plugin and I'm still new to SourcePawn so keep that in mind :)
 ```
