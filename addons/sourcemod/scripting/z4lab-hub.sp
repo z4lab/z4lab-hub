@@ -57,30 +57,30 @@ void CreateCommands()
 }
 
 // chat advertisement
-public Action z4labAdvert1(Handle timer )
+public Action z4labAdvert1(Handle timer)
 {
-	CPrintToChatAll("%t", "z4labAd1", g_hChatPrefix );
+	CPrintToChatAll("%t", "z4labAd1", g_hChatPrefix);
 	CreateTimer(55.0, z4labAdvert2);
 	return Plugin_Continue;
 }
 
 public Action z4labAdvert2(Handle timer)
 {
-	CPrintToChatAll("%t", "z4labAd2", g_hChatPrefix );
+	CPrintToChatAll("%t", "z4labAd2", g_hChatPrefix);
 	CreateTimer(55.0, z4labAdvert3);
 	return Plugin_Continue;
 }
 
 public Action z4labAdvert3(Handle timer)
 {
-	CPrintToChatAll("%t", "z4labAd3", g_hChatPrefix );
+	CPrintToChatAll("%t", "z4labAd3", g_hChatPrefix);
 	CreateTimer(55.0, z4labAdvert4);
 	return Plugin_Continue;
 }
 
 public Action z4labAdvert4(Handle timer)
 {
-	CPrintToChatAll("%t", "z4labAd4", g_hChatPrefix );
+	CPrintToChatAll("%t", "z4labAd4", g_hChatPrefix);
 	CreateTimer(55.0, z4labAdvert1);
 	return Plugin_Continue;
 }

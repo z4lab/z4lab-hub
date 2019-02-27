@@ -23,7 +23,7 @@
 	"z4labRules"
 	{
 		"#format"	"{1:s}"
-		"en"		"{1} Server Language is {lightgreen}ENGLISH ONLY{bluegrey} - Be nice and behave \n We don't want or tolerate DJ's/Rappers or trolls \n{bluegrey}detailed rules: {lightgreen}https://z4lab.com/rules"
+		"en"		"{1} Server Language is {lightgreen}ENGLISH ONLY{bluegrey} - Be nice and behave - We don't want or tolerate DJ's/Rappers or trolls - detailed rules: {lightgreen}https://z4lab.com/rules"
 	}
 	"z4labGiveaway"
 	{
@@ -43,7 +43,7 @@
 	"z4labTeamspeak"
 	{
 		"#format"	"{1:s}"
-		"en"		"{1} Server: {lightgreen}ts.z4lab.com {bluegrey}Server Nick: {lightgreen}z4lab"
+		"en"		"{1} Server: {lightgreen}ts.z4lab.com {bluegrey}| Server Nick: {lightgreen}z4lab"
 	}
 	"z4labSteamgroup"
 	{
@@ -73,7 +73,7 @@
 	"z4labAd1"
 	{
 		"#format"	"{1:s}"
-		"en"		"{1} {lightgreen}z4lab.com{bluegrey} - Chill CS:GO Community Servers [{gold}!z4lab {bluegrey} | {gold}!servers {bluegrey}| {gold}!rules {bluegrey}| {gold}!calladmin {bluegrey}| {gold}!report {bluegrey}| {gold}!bug{bluegrey}]"
+		"en"		"{1} {lightgreen}z4lab.com{bluegrey} - Chill CS:GO Community Servers [{gold}!z4lab {bluegrey}| {gold}!servers {bluegrey}| {gold}!rules {bluegrey}| {gold}!calladmin {bluegrey}| {gold}!report {bluegrey}| {gold}!bug{bluegrey}]"
 	}
 	"z4labAd2"
 	{
