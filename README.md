@@ -1,12 +1,25 @@
-# z4lab-hub
+# z4lab-hub v0.5
 
-main plugin installed on all our servers, currently WIP - this is my first *"real"* plugin and I'm still new to SourcePawn so keep that in mind :)
+this plugin is a central part for our community servers, it features a welcome message, custom commands and rotating chat information
 
 ## features 
-- welcome message for players
-- custom chat commands like: `!rules` or `!discord`
-- hintbox trigger for stuff like `!ws` (displays red NO message)
-- rotating chat information (like next map, commands, etc)
 
-## planned
-- everything stored in cfg file so it can be used by others without the need of recompiling and chaning sourcecode 
+- welcome hint box and chat message
+
+![welcome hint](https://z4lab.com/downloads/welcome-hint.jpg)
+
+![welcome chat](https://z4lab.com/downloads/welcome-chat.jpg)
+
+- custom chat commands like: `!rules`, `!discord`, `!homepage` or `!steamgroup`
+- chat advertisements like: {nextmap}, {timeleft}, website link and so on
+- alert box for commands like `!ws` and `!skins` - displays a message that these kind of plugins won't be supported on this server
+
+## planned features
+- create config file for:
+    - chat messages and time between them
+    - custom prefix
+    - custom commands
+
+```
+this is my first *"real"* plugin and I'm still new to SourcePawn so keep that in mind :)
+```
