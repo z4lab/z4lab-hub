@@ -33,7 +33,7 @@
 	"z4labHowtosurf"
 	{
 		"#format"	"{1:s}"
-		"en"		"{1} Watch this short video: {lightgreen}https://z4lab.com/HowToSurf {bluegrey}[3minutes with timestamp]"
+		"en"		"{1} Watch this short video: {lightgreen}https://z4lab.com/HowToSurf {bluegrey}(3minutes with timestamp])"
 	}
 	"z4labDiscord"
 	{
@@ -68,26 +68,26 @@
 	"z4labWelcome4"
 	{
 		"#format"	"{1:s}"
-		"en"		"{1} Useful commands: [{gold}!z4lab {bluegrey}| {gold}!servers {bluegrey}| {gold}!discord{bluegrey}]"
+		"en"		"{1} Useful commands: {default}[{gold}!z4lab {bluegrey}| {gold}!servers {bluegrey}| {gold}!discord{bluegrey}{default}]"
 	}
 	"z4labAd1"
 	{
 		"#format"	"{1:s}"
-		"en"		"{1} random chat info 1"
+		"en"		"{1} {lightgreen}z4lab.com{bluegrey} - Chill CS:GO Community Servers {default}[{gold}!z4lab {bluegrey} | {gold}!servers {bluegrey}| {gold}!rules {bluegrey}| {gold}!calladmin {bluegrey}| {gold}!bug{default}]"
 	}
 	"z4labAd2"
 	{
 		"#format"	"{1:s}"
-		"en"		"{1} random chat info 2"
+		"en"		"{1} Join our {gold}!steamgroup {bluegrey}and {gold}!discord {bluegrey}to enter our {lightred}AK-47 | Wasteland Rebel {gold}GIVEAWAY {bluegrey}- More information with {gold}!giveaway"
 	}
 	"z4labAd3"
 	{
 		"#format"	"{1:s}"
-		"en"		"{1} random chat info 3"
+		"en"		"{1} TeamSpeak: {lightgreen}ts.z4lab.com {bluegrey}and Discord: {lightgreen}z4lab.com/discord {bluegrey}use {default}[{gold}!teamspeak {bluegrey}| {gold}!discord{default}]"
 	}
 	"z4labAd4"
 	{
 		"#format"	"{1:s}"
-		"en"		"{1} random chat info 4"
+		"en"		"{1} Wanted: {lightred}Staff Members! {bluegrey}visit: {lightgreen}z4lab.com/staff {bluegrey}for more information"
 	}
 }
