@@ -3,57 +3,57 @@
 	"z4labMain"
 	{
 		"#format"	"{1:s}"
-		"en"		"{1} Overview of useful commands: {gold}!rules {bluegrey}|{gold} !homepage {bluegrey}|{gold} !steamgroup {bluegrey}|{gold} !teamspeak {bluegrey}|{gold} !discord {bluegrey}|{gold} !giveaway {bluegrey}|{gold} !changes {bluegrey}|{gold} !manifesto"
+		"en"		"{1} Useful commands: {gold}!rules {bluegrey}|{gold} !manifesto{bluegrey} | {gold}!discord {bluegrey}|{gold} !steam {bluegrey}|{gold} !teamspeak {bluegrey}|{gold} !homepage {bluegrey}|{gold} !giveaway {bluegrey}|{gold} !changes {bluegrey}| {gold}!calladmin {bluegrey}| {gold}!report {bluegrey}| {gold}!bug"
 	}
 	"z4labHomepage"
 	{
 		"#format"	"{1:s}"
-		"en"		"{1} visit us at {lightgreen}https://z4lab.com"
+		"en"		"{1} Our Homepage: {lightgreen}https://z4lab.com"
 	}
-	"z4labManifesto"	
+	"z4labManifesto"
 	{
 		"#format"	"{1:s}"
-		"en"		"{1} Manifesto Page: {lightgreen}https://z4lab.com/manifesto"
+		"en"		"{1} Manifesto: {lightgreen}https://z4lab.com/manifesto"
 	}
 	"z4labChangelog"
 	{
 		"#format"	"{1:s}"
-		"en"		"{1} recent changes: {lightgreen}https://z4lab.com/changelog"
+		"en"		"{1} Changelog: {lightgreen}https://z4lab.com/changelog"
 	}
 	"z4labRules"
 	{
 		"#format"	"{1:s}"
-		"en"		"{1} Detailed rules: {lightgreen}https://z4lab.com/rules - \n{bluegrey}Voice/Text Language is {lightgreen}ENGLISH{bluegrey} - Be nice and don't troll - if you just connect to make troubles, do a rap battle or play DJ expect a {red}kick"
+		"en"		"{1} Server Language is {lightgreen}ENGLISH ONLY{bluegrey} - Be nice and behave \n We don't want or tolerate DJ's/Rappers or trolls \n{bluegrey}detailed rules: {lightgreen}https://z4lab.com/rules"
 	}
 	"z4labGiveaway"
 	{
 		"#format"	"{1:s}"
-		"en"		"{1} Join our {gold}!steamgroup {bluegrey}and {gold}!discord - more Information: {lightgreen}https://z4lab.com/giveaway"
+		"en"		"{1} Join our {gold}!steamgroup {bluegrey}and {gold}!discord - more information under {lightgreen}https://z4lab.com/giveaway"
 	}
 	"z4labHowtosurf"
 	{
 		"#format"	"{1:s}"
-		"en"		"{1} Watch this short video: {lightgreen}https://z4lab.com/HowToSurf {bluegrey}(3minutes with timestamp])"
+		"en"		"{1} Watch this short video: {lightgreen}https://z4lab.com/HowToSurf {bluegrey}(3minutes with timestamp)"
 	}
 	"z4labDiscord"
 	{
 		"#format"	"{1:s}"
-		"en"		"{1} Use: {lightgreen}https://z4lab.com/discord {bluegrey}or {lightgreen}https://discord.gg/ddkRmhe"
+		"en"		"{1} {lightgreen}https://z4lab.com/discord {bluegrey}or {lightgreen}https://discord.gg/ddkRmhe"
 	}
 	"z4labTeamspeak"
 	{
 		"#format"	"{1:s}"
-		"en"		"{1} Server: {lightgreen}ts.z4lab.com {bluegrey}Server Nick: {lightgreen}z4lab {bluegrey}| 512 Slots"
+		"en"		"{1} Server: {lightgreen}ts.z4lab.com {bluegrey}Server Nick: {lightgreen}z4lab"
 	}
 	"z4labSteamgroup"
 	{
 		"#format"	"{1:s}"
-		"en"		"{1} Our steam group: {lightgreen}https://steamcommunity.com/groups/z4lab"
+		"en"		"{1} Our steam group: {lightgreen}https://steamcommunity.com/groups/z4lab {bluegrey}feel free to join!"
 	}
 	"z4labWelcome1"
 	{
 		"#format"	"{1:s}"
-		"en"		"{1} Welcome {purple}%N {bluegrey}enjoy your stay!"
+		"en"		"{1} Welcome {purple}%N {bluegrey}enjoy your stay on {lightgreen}z4lab"
 	}
 	"z4labWelcome2"
 	{
@@ -63,17 +63,17 @@
 	"z4labWelcome3"
 	{
 		"#format"	"{1:s}"
-		"en"		"{1} Be nice - {red}toxicity/racism {bluegrey}will not be tolerated!"
+		"en"		"{1} Be nice - {red}toxicity/racism {bluegrey}will not be tolerated! {default}[{gold}!manifesto{default}]"
 	}
 	"z4labWelcome4"
 	{
 		"#format"	"{1:s}"
-		"en"		"{1} Useful commands: {default}[{gold}!z4lab {bluegrey}| {gold}!servers {bluegrey}| {gold}!discord{bluegrey}{default}]"
+		"en"		"{1} Useful commands: {default}[{gold}!z4lab {bluegrey}| {gold}!servers {bluegrey}| {gold}!discord{default}]"
 	}
 	"z4labAd1"
 	{
 		"#format"	"{1:s}"
-		"en"		"{1} {lightgreen}z4lab.com{bluegrey} - Chill CS:GO Community Servers {default}[{gold}!z4lab {bluegrey} | {gold}!servers {bluegrey}| {gold}!rules {bluegrey}| {gold}!calladmin {bluegrey}| {gold}!bug{default}]"
+		"en"		"{1} {lightgreen}z4lab.com{bluegrey} - Chill CS:GO Community Servers {default}[{gold}!z4lab {bluegrey} | {gold}!servers {bluegrey}| {gold}!rules {bluegrey}| {gold}!calladmin {bluegrey}| {gold}!report {bluegrey}| {gold}!bug{default}]"
 	}
 	"z4labAd2"
 	{
@@ -88,6 +88,6 @@
 	"z4labAd4"
 	{
 		"#format"	"{1:s}"
-		"en"		"{1} Wanted: {lightred}Staff Members! {bluegrey}visit: {lightgreen}z4lab.com/staff {bluegrey}for more information"
+		"en"		"{1} Wanted: {gold}Staff Members! {bluegrey}visit: {lightgreen}z4lab.com/staff {bluegrey}for more information"
 	}
 }

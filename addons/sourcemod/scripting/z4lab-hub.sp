@@ -6,7 +6,7 @@ public Plugin myinfo =
 	name = "z4lab-hub",
 	author = "totles",
 	description = "z4lab hub [chat info, welcome message]",
-	version = "0.5",
+	version = "0.6",
 	url = "https://z4lab.com"
 };
 
@@ -22,6 +22,7 @@ public void OnPluginStart()
 	CreateCommands();
 	LoadTranslations("z4lab.phrases");
 	HookEvent("player_spawn", Event_OnPlayerSpawn);
+	CreateTimer (20.0, z4labAdvert1);
 }
 
 public void OnMapStart()
@@ -30,7 +31,6 @@ public void OnMapStart()
 	{
 		g_bMessagesShown[i] = false;
 	}
-	CreateTimer (20.0, z4labAdvert1);
 }
 
 void CreateCommands()
@@ -60,28 +60,28 @@ void CreateCommands()
 public Action z4labAdvert1(Handle timer )
 {
 	CPrintToChatAll("%t", "z4labAd1", g_hChatPrefix );
-	CreateTimer(20.0, z4labAdvert2);
+	CreateTimer(55.0, z4labAdvert2);
 	return Plugin_Continue;
 }
 
 public Action z4labAdvert2(Handle timer)
 {
 	CPrintToChatAll("%t", "z4labAd2", g_hChatPrefix );
-	CreateTimer(20.0, z4labAdvert3);
+	CreateTimer(55.0, z4labAdvert3);
 	return Plugin_Continue;
 }
 
 public Action z4labAdvert3(Handle timer)
 {
 	CPrintToChatAll("%t", "z4labAd3", g_hChatPrefix );
-	CreateTimer(20.0, z4labAdvert4);
+	CreateTimer(55.0, z4labAdvert4);
 	return Plugin_Continue;
 }
 
 public Action z4labAdvert4(Handle timer)
 {
 	CPrintToChatAll("%t", "z4labAd4", g_hChatPrefix );
-	CreateTimer(20.0, z4labAdvert1);
+	CreateTimer(55.0, z4labAdvert1);
 	return Plugin_Continue;
 }
 
@@ -156,13 +156,13 @@ public Action NoSkinsAlert(Handle timer, int smth)
 {
 	int client = GetClientOfUserId(smth);
 
-	if (numPrinted >= 45) 
+	if (numPrinted >= 40) 
 	{
 		numPrinted = 0;
 		return Plugin_Stop;
 	}
 
-	PrintCenterText(client, "<font color='#bf616a'>NO NO NO</font> - this will never happen\ncheck out <font color='#d08770'>!manifesto</font>\n<font color='#a3be8c'>https://z4lab.com/rules</font>");
+	PrintCenterText(client, "<font color='#bf616a'>NO NO NO</font> - this will never happen\ncheck out <font color='#d08770'>!manifesto</font> and\n<font color='#a3be8c'>https://z4lab.com/rules</font>");
 
 	numPrinted++;
 
@@ -190,7 +190,7 @@ public Action WelcomeMessageDelay(Handle timer, any data)
 		return Plugin_Continue;
 	}
 
-	PrintCenterText(client, "<font color='#b48ead'>Welcome - Please see chat for rules</font>\nMore info with <font color='#d08770'>!rules</font> or\n<font color='#a3be8c'>https://z4lab.com/rules</font>");
+	PrintCenterText(client, "<font color='#88c0d0'>Welcome!</font> Check chat for commands\nMore info with <font color='#d08770'>!rules</font> or on\n<font color='#a3be8c'>https://z4lab.com/rules</font>");
 	CPrintToChat(client, "%t", "z4labWelcome1", g_hChatPrefix, client);
 	CPrintToChat(client, "%t", "z4labWelcome2", g_hChatPrefix, client);
 	CPrintToChat(client, "%t", "z4labWelcome3", g_hChatPrefix, client);

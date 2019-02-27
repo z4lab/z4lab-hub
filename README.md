@@ -1,4 +1,4 @@
-# z4lab-hub v0.5
+# z4lab-hub v0.6
 
 this plugin is a central part for our community servers, it features a welcome message, custom commands and rotating chat information
 
