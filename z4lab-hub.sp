@@ -1,7 +1,7 @@
 #include <sourcemod>
 #include <colorvariables>
 #include <sdktools>
-
+// #pragma tabsize 0
 #define DEFAULT_TIMER_FLAGS TIMER_REPEAT | TIMER_FLAG_NO_MAPCHANGE
 
 public Plugin myinfo =
@@ -9,7 +9,7 @@ public Plugin myinfo =
 	name = "z4lab-hub",
 	author = "totles",
 	description = "z4lab hub [chat info, welcome message]",
-	version = "0.1",
+	version = "0.3",
 	url = "https://z4lab.com"
 };
 
@@ -18,13 +18,14 @@ new String:g_hChatPrefix[] = "[{lightgreen}z4lab{default}] {gold}#{bluegrey}";
 
 // general settings/stuff
 bool g_bMessagesShown[MAXPLAYERS + 1];
+static int numPrinted = 0;
 
 public void OnPluginStart()
 {
 	CreateCommands();
 	LoadTranslations("z4lab.phrases");
 	HookEvent("player_spawn", Event_OnPlayerSpawn);
-	CreateTimer( 10.0, Chat_Interval, _, DEFAULT_TIMER_FLAGS );
+	CreateTimer( 20.0, Chat_Interval, _, DEFAULT_TIMER_FLAGS );
 }
 
 public void OnMapStart()
@@ -64,7 +65,7 @@ public Action Chat_Interval(Handle timer )
     return Plugin_Continue;
 }  
 
-// chat replay (commands)
+// chat commands/triggers
 public Action z4labMain(int client, int args)
 {
 	CPrintToChat(client, "%t", "z4labMain", g_hChatPrefix);
@@ -127,8 +128,24 @@ public Action z4labSteamgroup(int client, int args)
 
 public Action z4labSkins(int client, int args)
 {
-	PrintCenterText(client, "<font color='#bf616a'>NO NO NO</font> - this will never happen\ncheck out <font color='#d08770'>!manifesto</font>\n<font color='#a3be8c'>https://z4lab.com/rules</font>", 60);
-	return Plugin_Handled;
+    CreateTimer(2.0, NoSkinsAlert, GetClientUserId(client), TIMER_REPEAT);
+}
+ 
+public Action NoSkinsAlert(Handle timer, int smth)
+{
+	int client = GetClientOfUserId(smth);
+
+	if (numPrinted >= 5) 
+	{
+		numPrinted = 0;
+		return Plugin_Stop;
+	}
+
+	PrintCenterText(client, "<font color='#bf616a'>NO NO NO</font> - this will never happen\ncheck out <font color='#d08770'>!manifesto</font>\n<font color='#a3be8c'>https://z4lab.com/rules</font>");
+
+	numPrinted++;
+
+	return Plugin_Continue;
 }
 
 // welcome message
