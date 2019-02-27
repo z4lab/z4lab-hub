@@ -63,17 +63,17 @@
 	"z4labWelcome3"
 	{
 		"#format"	"{1:s}"
-		"en"		"{1} Be nice - {red}toxicity/racism {bluegrey}will not be tolerated! {default}[{gold}!manifesto{default}]"
+		"en"		"{1} Be nice - {red}toxicity/racism {bluegrey}will not be tolerated! [{gold}!manifesto{bluegrey}]"
 	}
 	"z4labWelcome4"
 	{
 		"#format"	"{1:s}"
-		"en"		"{1} Useful commands: {default}[{gold}!z4lab {bluegrey}| {gold}!servers {bluegrey}| {gold}!discord{default}]"
+		"en"		"{1} Useful commands: [{gold}!z4lab {bluegrey}| {gold}!servers {bluegrey}| {gold}!discord{bluegrey}]"
 	}
 	"z4labAd1"
 	{
 		"#format"	"{1:s}"
-		"en"		"{1} {lightgreen}z4lab.com{bluegrey} - Chill CS:GO Community Servers {default}[{gold}!z4lab {bluegrey} | {gold}!servers {bluegrey}| {gold}!rules {bluegrey}| {gold}!calladmin {bluegrey}| {gold}!report {bluegrey}| {gold}!bug{default}]"
+		"en"		"{1} {lightgreen}z4lab.com{bluegrey} - Chill CS:GO Community Servers [{gold}!z4lab {bluegrey} | {gold}!servers {bluegrey}| {gold}!rules {bluegrey}| {gold}!calladmin {bluegrey}| {gold}!report {bluegrey}| {gold}!bug{bluegrey}]"
 	}
 	"z4labAd2"
 	{
@@ -83,7 +83,7 @@
 	"z4labAd3"
 	{
 		"#format"	"{1:s}"
-		"en"		"{1} TeamSpeak: {lightgreen}ts.z4lab.com {bluegrey}and Discord: {lightgreen}z4lab.com/discord {bluegrey}use {default}[{gold}!teamspeak {bluegrey}| {gold}!discord{default}]"
+		"en"		"{1} TeamSpeak: {lightgreen}ts.z4lab.com {bluegrey}and Discord: {lightgreen}z4lab.com/discord {bluegrey}use [{gold}!teamspeak {bluegrey}| {gold}!discord{bluegrey}]"
 	}
 	"z4labAd4"
 	{
