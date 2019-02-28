@@ -6,7 +6,7 @@ public Plugin myinfo =
 	name = "z4lab-hub",
 	author = "totles",
 	description = "z4lab hub [chat info, welcome message]",
-	version = "0.6",
+	version = "0.7",
 	url = "https://z4lab.com"
 };
 
@@ -149,9 +149,11 @@ public Action z4labSteamgroup(int client, int args)
 // show alert message for ws/skin plugin requests
 public Action z4labSkins(int client, int args)
 {
-    CreateTimer(0.1, NoSkinsAlert, GetClientUserId(client), TIMER_REPEAT);
+	ClientCommand(client, "play error");
+	CreateTimer(0.1, NoSkinsAlert, GetClientUserId(client), TIMER_REPEAT);
+	return Plugin_Handled;
 }
- 
+
 public Action NoSkinsAlert(Handle timer, int smth)
 {
 	int client = GetClientOfUserId(smth);
