@@ -6,7 +6,7 @@ public Plugin myinfo =
 	name = "z4lab-hub",
 	author = "totles",
 	description = "z4lab hub [chat info, welcome message]",
-	version = "0.8",
+	version = "0.9",
 	url = "https://z4lab.com"
 };
 
@@ -154,9 +154,9 @@ public Action z4labSkins(int client, int args)
 	return Plugin_Handled;
 }
 
-public Action NoSkinsAlert(Handle timer, int smth)
+public Action NoSkinsAlert(Handle timer, any data)
 {
-	int client = GetClientOfUserId(smth);
+	int client = GetClientOfUserId(data);
 
 	if (numPrinted >= 40) 
 	{
