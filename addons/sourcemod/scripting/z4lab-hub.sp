@@ -6,11 +6,11 @@ public Plugin myinfo =
 	name = "z4lab-hub",
 	author = "totles",
 	description = "z4lab hub [chat info, welcome message]",
-	version = "0.7",
+	version = "0.9",
 	url = "https://z4lab.com"
 };
 
-// set your chat prefix
+// set your chat prefix, deal with it @ace
 new String:g_hChatPrefix[] = "[{lightgreen}z4lab{default}] {gold}#{bluegrey}";
 
 // general settings/stuff
@@ -22,7 +22,7 @@ public void OnPluginStart()
 	CreateCommands();
 	LoadTranslations("z4lab.phrases");
 	HookEvent("player_spawn", Event_OnPlayerSpawn);
-	CreateTimer (20.0, z4labAdvert1);
+	CreateTimer (60.0, z4labAdvert1);
 }
 
 public void OnMapStart()
@@ -60,28 +60,28 @@ void CreateCommands()
 public Action z4labAdvert1(Handle timer)
 {
 	CPrintToChatAll("%t", "z4labAd1", g_hChatPrefix);
-	CreateTimer(55.0, z4labAdvert2);
+	CreateTimer(80.0, z4labAdvert2);
 	return Plugin_Continue;
 }
 
 public Action z4labAdvert2(Handle timer)
 {
 	CPrintToChatAll("%t", "z4labAd2", g_hChatPrefix);
-	CreateTimer(55.0, z4labAdvert3);
+	CreateTimer(80.0, z4labAdvert3);
 	return Plugin_Continue;
 }
 
 public Action z4labAdvert3(Handle timer)
 {
 	CPrintToChatAll("%t", "z4labAd3", g_hChatPrefix);
-	CreateTimer(55.0, z4labAdvert4);
+	CreateTimer(80.0, z4labAdvert4);
 	return Plugin_Continue;
 }
 
 public Action z4labAdvert4(Handle timer)
 {
 	CPrintToChatAll("%t", "z4labAd4", g_hChatPrefix);
-	CreateTimer(55.0, z4labAdvert1);
+	CreateTimer(80.0, z4labAdvert1);
 	return Plugin_Continue;
 }
 
@@ -154,9 +154,9 @@ public Action z4labSkins(int client, int args)
 	return Plugin_Handled;
 }
 
-public Action NoSkinsAlert(Handle timer, int smth)
+public Action NoSkinsAlert(Handle timer, any data)
 {
-	int client = GetClientOfUserId(smth);
+	int client = GetClientOfUserId(data);
 
 	if (numPrinted >= 40) 
 	{
