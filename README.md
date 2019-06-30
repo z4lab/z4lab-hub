@@ -17,9 +17,9 @@ this plugin is a central part for our community servers, it features a welcome m
 
 ## planned features
 -   create config file for:
-    -   chat messages and time between them
-    -   custom prefix
-    -   custom commands
+    - [x] chat messages and time between them
+    - [x] custom prefix
+    - [ ] custom commands
 
 ```text
 this is my first "real" plugin and I'm still new to SourcePawn so keep that in mind :)
