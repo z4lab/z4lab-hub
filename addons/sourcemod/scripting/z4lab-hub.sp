@@ -19,6 +19,7 @@ ConVar g_Cvar_ChatPrefix;
 
 float AdvertDelay;
 float FirstAdvertDelay;
+char g_szChatPrefix[64];
 
 public void OnPluginStart(){
 	CreateCommands();
@@ -71,81 +72,83 @@ void CreateConVars() {
 	AdvertDelay = g_Cvar_AdvertDelay.FloatValue;
 	FirstAdvertDelay = g_Cvar_FirstAdvertDelay.FloatValue;
 
+	GetConVarString(g_Cvar_ChatPrefix, g_szChatPrefix, sizeof(g_szChatPrefix));
+
 }
 
 // chat advertisement
 public Action z4labAdvert1(Handle timer) {
-	CPrintToChatAll("%t", "z4labAd1", g_Cvar_ChatPrefix);
+	CPrintToChatAll("%t", "z4labAd1", g_szChatPrefix);
 	CreateTimer(AdvertDelay, z4labAdvert2);
 	return Plugin_Continue;
 }
 
 public Action z4labAdvert2(Handle timer) {
-	CPrintToChatAll("%t", "z4labAd2", g_Cvar_ChatPrefix);
+	CPrintToChatAll("%t", "z4labAd2", g_szChatPrefix);
 	CreateTimer(AdvertDelay, z4labAdvert3);
 	return Plugin_Continue;
 }
 
 public Action z4labAdvert3(Handle timer) {
-	CPrintToChatAll("%t", "z4labAd3", g_Cvar_ChatPrefix);
+	CPrintToChatAll("%t", "z4labAd3", g_szChatPrefix);
 	CreateTimer(AdvertDelay, z4labAdvert4);
 	return Plugin_Continue;
 }
 
 public Action z4labAdvert4(Handle timer) {
-	CPrintToChatAll("%t", "z4labAd4", g_Cvar_ChatPrefix);
+	CPrintToChatAll("%t", "z4labAd4", g_szChatPrefix);
 	CreateTimer(AdvertDelay, z4labAdvert1);
 	return Plugin_Continue;
 }
 
 // chat commands/triggers
 public Action z4labMain(int client, int args) {
-	CPrintToChat(client, "%t", "z4labMain", g_Cvar_ChatPrefix);
+	CPrintToChat(client, "%t", "z4labMain", g_szChatPrefix);
 	return Plugin_Handled;
 }
 
 public Action z4labHomepage(int client, int args) {
-	CPrintToChat(client, "%t", "z4labHomepage", g_Cvar_ChatPrefix);
+	CPrintToChat(client, "%t", "z4labHomepage", g_szChatPrefix);
 	return Plugin_Handled;
 }
 
 public Action z4labManifesto(int client, int args) {
-	CPrintToChat(client, "%t", "z4labManifesto", g_Cvar_ChatPrefix);
+	CPrintToChat(client, "%t", "z4labManifesto", g_szChatPrefix);
 	return Plugin_Handled;
 }
 
 public Action z4labChangelog(int client, int args) {
-	CPrintToChat(client, "%t", "z4labChangelog", g_Cvar_ChatPrefix);
+	CPrintToChat(client, "%t", "z4labChangelog", g_szChatPrefix);
 	return Plugin_Handled;
 }
 
 public Action z4labRules(int client, int args) {
-	CPrintToChat(client, "%t", "z4labRules", g_Cvar_ChatPrefix);
+	CPrintToChat(client, "%t", "z4labRules", g_szChatPrefix);
 	return Plugin_Handled;
 }
 
 public Action z4labGiveaway(int client, int args) {
-	CPrintToChat(client, "%t", "z4labGiveaway", g_Cvar_ChatPrefix);
+	CPrintToChat(client, "%t", "z4labGiveaway", g_szChatPrefix);
 	return Plugin_Handled;
 }
 
 public Action z4labHowtosurf(int client, int args) {
-	CPrintToChat(client, "%t", "z4labHowtosurf", g_Cvar_ChatPrefix);
+	CPrintToChat(client, "%t", "z4labHowtosurf", g_szChatPrefix);
 	return Plugin_Handled;
 }
 
 public Action z4labDiscord(int client, int args) {
-	CPrintToChat(client, "%t", "z4labDiscord", g_Cvar_ChatPrefix);
+	CPrintToChat(client, "%t", "z4labDiscord", g_szChatPrefix);
 	return Plugin_Handled;
 }
 
 public Action z4labTeamspeak(int client, int args) {
-	CPrintToChat(client, "%t", "z4labTeamspeak", g_Cvar_ChatPrefix);
+	CPrintToChat(client, "%t", "z4labTeamspeak", g_szChatPrefix);
 	return Plugin_Handled;
 }
 
 public Action z4labSteamgroup(int client, int args) {
-	CPrintToChat(client, "%t", "z4labSteamgroup", g_Cvar_ChatPrefix);
+	CPrintToChat(client, "%t", "z4labSteamgroup", g_szChatPrefix);
 	return Plugin_Handled;
 }
 
@@ -185,10 +188,10 @@ public Action WelcomeMessageDelay(Handle timer, any data) {
 	if (client == 0 || !IsPlayerAlive(client) || g_bMessagesShown[client]) return Plugin_Continue;
 
 	PrintCenterText(client, "<font color='#88c0d0'>Welcome!</font> Check chat for commands\nMore info with <font color='#d08770'>!rules</font> or on\n<font color='#a3be8c'>https://z4lab.com/rules</font>");
-	CPrintToChat(client, "%t", "z4labWelcome1", g_Cvar_ChatPrefix, client);
-	CPrintToChat(client, "%t", "z4labWelcome2", g_Cvar_ChatPrefix, client);
-	CPrintToChat(client, "%t", "z4labWelcome3", g_Cvar_ChatPrefix, client);
-	CPrintToChat(client, "%t", "z4labWelcome4", g_Cvar_ChatPrefix, client);
+	CPrintToChat(client, "%t", "z4labWelcome1", g_szChatPrefix, client);
+	CPrintToChat(client, "%t", "z4labWelcome2", g_szChatPrefix, client);
+	CPrintToChat(client, "%t", "z4labWelcome3", g_szChatPrefix, client);
+	CPrintToChat(client, "%t", "z4labWelcome4", g_szChatPrefix, client);
 	g_bMessagesShown[client] = true;
 	
 	return Plugin_Continue;
