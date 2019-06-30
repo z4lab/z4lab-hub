@@ -5,7 +5,7 @@ public Plugin myinfo = {
 	name = "z4lab-hub",
 	author = "totles",
 	description = "z4lab hub [chat info, welcome message]",
-	version = "0.9",
+	version = "1.0",
 	url = "https://z4lab.com"
 };
 
