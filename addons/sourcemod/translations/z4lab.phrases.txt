@@ -58,7 +58,7 @@
 	"z4labWelcome2"
 	{
 		"#format"	"{1:s}"
-		"en"		"{1} You can find our rules with {gold}!rules {bluegrey}or on {lightgreen}z4lab.com/rules"
+		"en"		"{1} Chat/Voice is {red}english only! {bluegrey}You can find our rules with {gold}!rules {bluegrey}or on {lightgreen}z4lab.com/rules"
 	}
 	"z4labWelcome3"
 	{

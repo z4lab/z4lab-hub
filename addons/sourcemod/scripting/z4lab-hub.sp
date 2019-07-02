@@ -13,23 +13,24 @@ public Plugin myinfo = {
 bool g_bMessagesShown[MAXPLAYERS + 1];
 static int numPrinted = 0;
 
+ConVar g_Cvar_SpamProtection;
 ConVar g_Cvar_FirstAdvertDelay;
 ConVar g_Cvar_AdvertDelay;
 ConVar g_Cvar_ChatPrefix;
 
-float AdvertDelay;
-float FirstAdvertDelay;
-char g_szChatPrefix[64];
+int spamProtection;
+float advertDelay;
+float firstAdvertDelay;
+char chatPrefix[64];
 
 public void OnPluginStart(){
 	CreateCommands();
+	CreateConVars();
 
 	LoadTranslations("z4lab.phrases");
 
-	CreateConVars();
-
 	HookEvent("player_spawn", Event_OnPlayerSpawn);
-	CreateTimer (FirstAdvertDelay, z4labAdvert1);
+	CreateTimer (firstAdvertDelay, z4labAdvert1);
 
 }
 
@@ -62,93 +63,93 @@ void CreateCommands() {
 }
 
 void CreateConVars() {
-
+	//ConVars
 	g_Cvar_ChatPrefix = CreateConVar("z4lab_chat_prefix", "[{lightgreen}z4lab{default}] {gold}#{bluegrey}", "Chat prefix for our z4lab-hub plugin");
 	g_Cvar_AdvertDelay = CreateConVar("z4lab_advert_delay", "80.0" , "Specifies the delay between our chat adverts", 0, true, 40.0, true, 120.0);
 	g_Cvar_FirstAdvertDelay = CreateConVar("z4lab_first_advert_delay", "60.0" , "Specifies the delay between our chat adverts", 0, true, 20.0, true, 120.0);
-
+	g_Cvar_SpamProtection = CreateConVar("z4lab_spam_protection", "40", "Specifies after how much commands the player wont get any reponse from the plugin", 0, true, 0, true, 80)
+	//Create/Update/Read config file
 	AutoExecConfig(true, "z4lab_hub");
-
-	AdvertDelay = g_Cvar_AdvertDelay.FloatValue;
-	FirstAdvertDelay = g_Cvar_FirstAdvertDelay.FloatValue;
-
-	GetConVarString(g_Cvar_ChatPrefix, g_szChatPrefix, sizeof(g_szChatPrefix));
-
+	//ConVars to type
+	advertDelay = g_Cvar_AdvertDelay.FloatValue;
+	firstAdvertDelay = g_Cvar_FirstAdvertDelay.FloatValue;
+	spamProtection = g_Cvar_SpamProtection.IntValue;
+	GetConVarString(g_Cvar_ChatPrefix, chatPrefix, sizeof(chatPrefix));
 }
 
 // chat advertisement
 public Action z4labAdvert1(Handle timer) {
-	CPrintToChatAll("%t", "z4labAd1", g_szChatPrefix);
-	CreateTimer(AdvertDelay, z4labAdvert2);
+	CPrintToChatAll("%t", "z4labAd1", chatPrefix);
+	CreateTimer(advertDelay, z4labAdvert2);
 	return Plugin_Continue;
 }
 
 public Action z4labAdvert2(Handle timer) {
-	CPrintToChatAll("%t", "z4labAd2", g_szChatPrefix);
-	CreateTimer(AdvertDelay, z4labAdvert3);
+	CPrintToChatAll("%t", "z4labAd2", chatPrefix);
+	CreateTimer(advertDelay, z4labAdvert3);
 	return Plugin_Continue;
 }
 
 public Action z4labAdvert3(Handle timer) {
-	CPrintToChatAll("%t", "z4labAd3", g_szChatPrefix);
-	CreateTimer(AdvertDelay, z4labAdvert4);
+	CPrintToChatAll("%t", "z4labAd3", chatPrefix);
+	CreateTimer(advertDelay, z4labAdvert4);
 	return Plugin_Continue;
 }
 
 public Action z4labAdvert4(Handle timer) {
-	CPrintToChatAll("%t", "z4labAd4", g_szChatPrefix);
-	CreateTimer(AdvertDelay, z4labAdvert1);
+	CPrintToChatAll("%t", "z4labAd4", chatPrefix);
+	CreateTimer(advertDelay, z4labAdvert1);
 	return Plugin_Continue;
 }
 
 // chat commands/triggers
 public Action z4labMain(int client, int args) {
-	CPrintToChat(client, "%t", "z4labMain", g_szChatPrefix);
+	CPrintToChat(client, "%t", "z4labMain", chatPrefix);
 	return Plugin_Handled;
 }
 
 public Action z4labHomepage(int client, int args) {
-	CPrintToChat(client, "%t", "z4labHomepage", g_szChatPrefix);
+	CPrintToChat(client, "%t", "z4labHomepage", chatPrefix);
 	return Plugin_Handled;
 }
 
 public Action z4labManifesto(int client, int args) {
-	CPrintToChat(client, "%t", "z4labManifesto", g_szChatPrefix);
+	CPrintToChat(client, "%t", "z4labManifesto", chatPrefix);
 	return Plugin_Handled;
 }
 
 public Action z4labChangelog(int client, int args) {
-	CPrintToChat(client, "%t", "z4labChangelog", g_szChatPrefix);
+	CPrintToChat(client, "%t", "z4labChangelog", chatPrefix);
 	return Plugin_Handled;
 }
 
 public Action z4labRules(int client, int args) {
-	CPrintToChat(client, "%t", "z4labRules", g_szChatPrefix);
+	CPrintToChat(client, "%t", "z4labRules", chatPrefix);
 	return Plugin_Handled;
 }
 
 public Action z4labGiveaway(int client, int args) {
-	CPrintToChat(client, "%t", "z4labGiveaway", g_szChatPrefix);
+	CPrintToChat(client, "%t", "z4labGiveaway", chatPrefix);
 	return Plugin_Handled;
 }
 
 public Action z4labHowtosurf(int client, int args) {
-	CPrintToChat(client, "%t", "z4labHowtosurf", g_szChatPrefix);
+	CPrintToChat(client, "%t", "z4labHowtosurf", chatPrefix);
 	return Plugin_Handled;
 }
 
 public Action z4labDiscord(int client, int args) {
-	CPrintToChat(client, "%t", "z4labDiscord", g_szChatPrefix);
+	CPrintToChat(client, "%t", "z4labDiscord", chatPrefix);
 	return Plugin_Handled;
 }
 
 public Action z4labTeamspeak(int client, int args) {
-	CPrintToChat(client, "%t", "z4labTeamspeak", g_szChatPrefix);
+	CPrintToChat(client, "%t", "z4labTeamspeak", chatPrefix);
 	return Plugin_Handled;
 }
 
 public Action z4labSteamgroup(int client, int args) {
-	CPrintToChat(client, "%t", "z4labSteamgroup", g_szChatPrefix);
+	CPrintToChat(client, "%t", "z4labSteamgroup", chatPrefix);
 	return Plugin_Handled;
 }
 
@@ -188,10 +189,10 @@ public Action WelcomeMessageDelay(Handle timer, any data) {
 	if (client == 0 || !IsPlayerAlive(client) || g_bMessagesShown[client]) return Plugin_Continue;
 
 	PrintCenterText(client, "<font color='#88c0d0'>Welcome!</font> Check chat for commands\nMore info with <font color='#d08770'>!rules</font> or on\n<font color='#a3be8c'>https://z4lab.com/rules</font>");
-	CPrintToChat(client, "%t", "z4labWelcome1", g_szChatPrefix, client);
-	CPrintToChat(client, "%t", "z4labWelcome2", g_szChatPrefix, client);
-	CPrintToChat(client, "%t", "z4labWelcome3", g_szChatPrefix, client);
-	CPrintToChat(client, "%t", "z4labWelcome4", g_szChatPrefix, client);
+	CPrintToChat(client, "%t", "z4labWelcome1", chatPrefix, client);
+	CPrintToChat(client, "%t", "z4labWelcome2", chatPrefix, client);
+	CPrintToChat(client, "%t", "z4labWelcome3", chatPrefix, client);
+	CPrintToChat(client, "%t", "z4labWelcome4", chatPrefix, client);
 	g_bMessagesShown[client] = true;
 	
 	return Plugin_Continue;
