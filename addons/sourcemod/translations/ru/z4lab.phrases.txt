@@ -1,0 +1,93 @@
+"Phrases"
+{
+	"z4labMain"
+	{
+		"#format"	"{1:s}"
+		"ru"		"{1} Полезные команды: {gold}!rules {bluegrey}|{gold} !manifesto{bluegrey} | {gold}!discord {bluegrey}|{gold} !steam {bluegrey}|{gold} !teamspeak {bluegrey}|{gold} !homepage {bluegrey}|{gold} !giveaway {bluegrey}|{gold} !changes {bluegrey}| {gold}!calladmin {bluegrey}| {gold}!report {bluegrey}| {gold}!bug"
+	}
+	"z4labHomepage"
+	{
+		"#format"	"{1:s}"
+		"ru"		"{1} Наша домашняя страница: {lightgreen}https://z4lab.com"
+	}
+	"z4labManifesto"
+	{
+		"#format"	"{1:s}"
+		"ru"		"{1} Манифест: {lightgreen}https://z4lab.com/manifesto"
+	}
+	"z4labChangelog"
+	{
+		"#format"	"{1:s}"
+		"ru"		"{1} Список изменений: {lightgreen}https://z4lab.com/changelog"
+	}
+	"z4labRules"
+	{
+		"#format"	"{1:s}"
+		"ru"		"{1} Пожалуйста, общайтесь {lightgreen}ТОЛЬКО НА АНГЛИЙСКОМ{bluegrey} - Будь милым и веди себя хорошо - Мы не хотим или терпим Ди-джеев/Рэперов или троллей - подробные правила: {lightgreen}https://z4lab.com/rules"
+	}
+	"z4labGiveaway"
+	{
+		"#format"	"{1:s}"
+		"ru"		"{1} Присоединяйтесь к нашей {gold}!steamgroup {bluegrey}и {gold}!discord - больше информации в {lightgreen}https://z4lab.com/giveaway"
+	}
+	"z4labHowtosurf"
+	{
+		"#format"	"{1:s}"
+		"ru"		"{1} Посмотри это короткое видео: {lightgreen}https://z4lab.com/HowToSurf {bluegrey}(3минут с отметками времени)"
+	}
+	"z4labDiscord"
+	{
+		"#format"	"{1:s}"
+		"ru"		"{1} {lightgreen}https://z4lab.com/discord {bluegrey}или {lightgreen}https://discord.gg/ddkRmhe"
+	}
+	"z4labTeamspeak"
+	{
+		"#format"	"{1:s}"
+		"ru"		"{1} Сервер: {lightgreen}ts.z4lab.com {bluegrey}| Ник сервера: {lightgreen}z4lab"
+	}
+	"z4labSteamgroup"
+	{
+		"#format"	"{1:s}"
+		"ru"		"{1} Наша группа steam: {lightgreen}https://steamcommunity.com/groups/z4lab {bluegrey}не стесняйтесь присоединиться!"
+	}
+	"z4labWelcome1"
+	{
+		"#format"	"{1:s}"
+		"ru"		"{1} Добро пожаловать {purple}%N {bluegrey}, приятного пребывания на {lightgreen}z4lab"
+	}
+	"z4labWelcome2"
+	{
+		"#format"	"{1:s}"
+		"ru"		"{1} Вы можете найти наши правила с {gold}!rules {bluegrey}или на {lightgreen}z4lab.com/rules"
+	}
+	"z4labWelcome3"
+	{
+		"#format"	"{1:s}"
+		"ru"		"{1} Будь милым - {red}токсичность/расизм {bluegrey}не потерпим! [{gold}!manifesto{bluegrey}]"
+	}
+	"z4labWelcome4"
+	{
+		"#format"	"{1:s}"
+		"ru"		"{1} Полезные команды: [{gold}!z4lab {bluegrey}| {gold}!servers {bluegrey}| {gold}!discord{bluegrey}]"
+	}
+	"z4labAd1"
+	{
+		"#format"	"{1:s}"
+		"ru"		"{1} {lightgreen}z4lab.com{bluegrey} - Чилл сервера сообщества CS:GO [{gold}!z4lab {bluegrey}| {gold}!servers {bluegrey}| {gold}!rules {bluegrey}| {gold}!calladmin {bluegrey}| {gold}!report {bluegrey}| {gold}!bug{bluegrey}]"
+	}
+	"z4labAd2"
+	{
+		"#format"	"{1:s}"
+		"ru"		"{1} Присоединяйтесь к нашей {gold}!steamgroup {bluegrey}и {gold}!discord {bluegrey}, чтобы войти в нашу {gold}РАЗДАЧУ {lightred}AK-47 | Пустынный повстанец {gold}- Больше информации {gold}!giveaway"
+	}
+	"z4labAd3"
+	{
+		"#format"	"{1:s}"
+		"ru"		"{1} TeamSpeak: {lightgreen}ts.z4lab.com {bluegrey}и Discord: {lightgreen}z4lab.com/discord {bluegrey}используйте [{gold}!teamspeak {bluegrey}| {gold}!discord{bluegrey}]"
+	}
+	"z4labAd4"
+	{
+		"#format"	"{1:s}"
+		"ru"		"{1} Требуются: {gold}Администраторы! {bluegrey}посетите: {lightgreen}z4lab.com/staff {bluegrey}чтобы получить больше информации"
+	}
+}
